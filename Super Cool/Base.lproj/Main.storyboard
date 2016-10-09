@@ -1,25 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Super_Cool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHf-u2-2qQ">
+                                <rect key="frame" x="79" y="269" width="159" height="30"/>
+                                <state key="normal" title="Make Me Super Cool"/>
+                                <connections>
+                                    <action selector="Makemebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ON-2t-knj"/>
+                                    <action selector="makeMeNotUncoolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXv-pf-ISS"/>
+                                    <action selector="makemenotuncoolbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3G-AJ-khi"/>
+                                    <action selector="makemesupercoolbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWs-F6-Q8z"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boom" translatesAutoresizingMaskIntoConstraints="NO" id="bNW-IY-lef">
+                                <rect key="frame" x="12" y="133" width="296" height="143"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skull" translatesAutoresizingMaskIntoConstraints="NO" id="lP2-MQ-010">
+                                <rect key="frame" x="-266" y="-93" width="782" height="844"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="boom_image" destination="bNW-IY-lef" id="rcw-X4-UA1"/>
+                        <outlet property="cool_bg" destination="lP2-MQ-010" id="NSA-96-MuR"/>
+                        <outlet property="makemesupercoolbutton" destination="iHf-u2-2qQ" id="fSk-0M-2t7"/>
+                        <outlet property="uncool_button" destination="iHf-u2-2qQ" id="2OL-fw-FOz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-463" y="-131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="boom" width="563" height="98"/>
+        <image name="skull" width="1020" height="850"/>
+    </resources>
 </document>
